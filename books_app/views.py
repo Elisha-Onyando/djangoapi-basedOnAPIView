@@ -23,7 +23,7 @@ class CreateBook(APIView):
 				# Save the new book to the database
 				serializer.save()
 				# Return created response
-				print(serializer.data)
+			
 				res = ApiResponse.success_response('Book created successfully', '00', serializer.data)
 				return Response(res, status=status.HTTP_201_CREATED)
 			# Return errors if invalid
